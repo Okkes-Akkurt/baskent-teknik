@@ -1,0 +1,28 @@
+# Dependencies
+/node_modules
+
+# Build files
+/build
+/dist
+
+# Environment variables
+/.env
+
+# IDE files
+/.idea
+*.iml
+
+# Logs
+/logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnp-*
+*.log
+
+
+# IDE files
+/.vscode
+*.code-workspace
+
+package-lock.json

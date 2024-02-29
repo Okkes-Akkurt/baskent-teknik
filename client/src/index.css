@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+
+html{
+    background-color: #DEDEE8;
+}
+
+.slick-arrow.slick-prev {
+	left: 3rem !important;
+    z-index: 2;
+}
+
+.slick-arrow.slick-next {
+	right: 3rem !important;
+    z-index: 2;
+}
