@@ -11,7 +11,7 @@ const Footer = () => {
 						<div class='p-8 bg-gray-900'>
 							<div class='text-center'>
 								<a
-									href='https://www.baysolarteknik.com/'
+									href=''
 									target='_blank'
 									rel='nofollow'>
 									<img
@@ -40,12 +40,12 @@ const Footer = () => {
 								</div>
 								<div class='mb-4'>
 									<h6 class='font-bold'>Telefon:</h6>
-									<a href='tel:0312 557 80 81'>Lorem, ipsum dolor.</a> -{' '}
-									<a href='tel:0532 053 02 06'>Lorem, ipsum dolor.</a>
+									<a href='tel:Lorem, ipsum dolor'>Lorem, ipsum dolor.</a> -{' '}
+									<a href='tel:Lorem, ipsum dolor'>Lorem, ipsum dolor.</a>
 								</div>
 								<div>
 									<h6 class='font-bold'>E-posta:</h6>
-									<a href='mailto:info@baysolarteknik.com'>Lorem, ipsum dolor.</a>
+									<a href='mailto:Lorem, ipsum dolor'>Lorem, ipsum dolor.</a>
 								</div>
 							</div>
 						</div>
@@ -58,25 +58,19 @@ const Footer = () => {
 							<div class='mt-8'>
 								<ul>
 									<li>
-										<a href='https://www.baysolarteknik.com/'>Ana Sayfa</a>
+										<a href='/'>Ana Sayfa</a>
 									</li>
 									<li>
-										<a href='https://www.baysolarteknik.com/hakkimizda'>Hakkımızda</a>
+										<a href=''>Hakkımızda</a>
 									</li>
 									<li>
-										<a href='https://www.baysolarteknik.com/sss'>S.S.S.</a>
+										<a href='/sss'>S.S.S.</a>
 									</li>
 									<li>
-										<a href='https://www.baysolarteknik.com/referanslarimiz'>Referanslarımız</a>
+										<a href='/contact'>İletişim</a>
 									</li>
 									<li>
-										<a href='https://www.baysolarteknik.com/bloglar'>Blog</a>
-									</li>
-									<li>
-										<a href='https://www.baysolarteknik.com/iletisim'>İletişim</a>
-									</li>
-									<li>
-										<a href='https://www.baysolarteknik.com/gizlilik-sozlesmesi'>
+										<a href='/gizlilik-sozlesmesi'>
 											Gizlilik Sözleşmesi
 										</a>
 									</li>
@@ -92,35 +86,35 @@ const Footer = () => {
 							<div class='mt-8'>
 								<ul>
 									<li>
-										<a href='https://www.baysolarteknik.com/hizmet/gunes-enerjisi/'>
+										<a href=''>
 											Güneş Enerjisi
 										</a>
 									</li>
 									<li>
-										<a href='https://www.baysolarteknik.com/hizmet/gunes-kollektoru/'>
+										<a href=''>
 											Güneş Kollektörü
 										</a>
 									</li>
 									<li>
-										<a href='https://www.baysolarteknik.com/hizmet/isi-pompasi/'>Isı Pompası</a>
+										<a href=''>Isı Pompası</a>
 									</li>
 									<li>
-										<a href='https://www.baysolarteknik.com/hizmet/enerji-sistemleri/'>
+										<a href=''>
 											Enerji Sistemleri
 										</a>
 									</li>
 									<li>
-										<a href='https://www.baysolarteknik.com/hizmet/moduler-su-depolari/'>
+										<a href=''>
 											Moduler Su Depoları
 										</a>
 									</li>
 									<li>
-										<a href='https://www.baysolarteknik.com/hizmet/akumulasyon-tanki/'>
+										<a href=''>
 											Akümülasyon Tankı
 										</a>
 									</li>
 									<li>
-										<a href='https://www.baysolarteknik.com/hizmet/serpantinli-emaye-boyler/'>
+										<a href=''>
 											Serpantinli Emaye Boyler
 										</a>
 									</li>
