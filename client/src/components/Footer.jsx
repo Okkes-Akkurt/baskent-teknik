@@ -23,9 +23,7 @@ const Footer = () => {
 							</div>
 							<div class='mt-8'>
 								<p>
-									Baysolar Teknik, güneş enerjisiyle ilgili projelerde kalite, güvenilirlik ve
-									çevresel sürdürülebilirlik ilkelerine bağlı kalarak müşterilerine hizmet
-									vermektedir.
+								Başkent Teknik olarak, elektrik ve sıhhi tesisat alanında sunduğumuz kaliteli hizmetlerle, profesyonellik, dürüstlük ve güvenilirlik ilkelerini benimseyerek hizmet vermektedir.
 								</p>
 							</div>
 						</div>
