@@ -28,6 +28,7 @@ const Header = () => {
 					slidesToScroll: 1,
 					infinite: true,
 					initialSlide: 1,
+					arrows: false,
 				},
 			},
 			{
@@ -36,44 +37,44 @@ const Header = () => {
 					slidesToShow: 1,
 					slidesToScroll: 1,
 					infinite: true,
+					arrows: false,
 				},
 			},
 		],
 	};
 
 	return (
-
-			<div className='slider-container'>
-				<Slider {...settings}>
-					<div className=''>
-						<img
-							src='https://www.baysolarteknik.com/yonetim/upload/Anasayfa/1f06eb23f3b3d3abfcddbcf94551a9.jpg'
-							alt=''
-							className='w-full'
-						/>
-						<div className='imageText absolute top-1/2 -translate-y-1/2 text-white md:pl-36'>
-							<h3 className='text-8xl font-bold'>
-								Güneşin Sıcaklığıyla,
-								<br /> Enerji Verimliliği
-							</h3>
-							<p className='mt-8'>Baysolar Teknik İle Geleceği Yakalayın. </p>
-						</div>
+		<div className='slider-container'>
+			<Slider {...settings}>
+				<div className=''>
+					<img
+						src='https://www.baysolarteknik.com/yonetim/upload/Anasayfa/1f06eb23f3b3d3abfcddbcf94551a9.jpg'
+						alt=''
+						className='w-full'
+					/>
+					<div className='imageText absolute top-1/2 -translate-y-1/2 text-white md:pl-36 pl-8'>
+						<h3 className='text-4xl md:text-6xl font-bold'>
+							Güneşin Sıcaklığıyla,
+							<br /> Enerji Verimliliği
+						</h3>
+						<p className='mt-4 md:mt-8'>Baysolar Teknik İle Geleceği Yakalayın. </p>
 					</div>
-					<div>
-						<img
-							src='https://www.baysolarteknik.com/yonetim/upload/Anasayfa/639eaff48c2a397e9d214355385571.jpg'
-							alt=''
-							className='w-full'
-						/>
-						<div className='imageText absolute top-1/2 -translate-y-1/2 text-white md:pl-36'>
-							<h3 className='text-8xl font-bold'>
-								Teknolojide Yenilik, <br /> Enerjide Güneş!
-							</h3>
-							<p className='mt-8 text-lg'>Geleceğe Işık Tutuyoruz, Güneşle Aydınlanıyoruz!</p>
-						</div>
+				</div>
+				<div className='relative'>
+					<img
+						src='https://www.baysolarteknik.com/yonetim/upload/Anasayfa/639eaff48c2a397e9d214355385571.jpg'
+						alt=''
+						className='w-full'
+					/>
+					<div className='imageText absolute top-1/2 -translate-y-1/2 text-white md:pl-36 pl-8'>
+						<h3 className='text-4xl md:text-6xl font-bold'>
+							Teknolojide Yenilik, <br /> Enerjide Güneş!
+						</h3>
+						<p className='mt-4 md:mt-8 text-lg'>Geleceğe Işık Tutuyoruz, Güneşle Aydınlanıyoruz!</p>
 					</div>
-				</Slider>
-			</div>
+				</div>
+			</Slider>
+		</div>
 	);
 };
 

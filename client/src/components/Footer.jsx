@@ -38,16 +38,16 @@ const Footer = () => {
 							<div class='mt-8'>
 								<div class='mb-4'>
 									<h6 class='font-bold'>Adres:</h6>
-									<p>Şeker Mah. 1417 Cad. Zirve Loft No: 2A/27 Etimesgut / Ankara</p>
+									<p>Etimesgut / Ankara</p>
 								</div>
 								<div class='mb-4'>
 									<h6 class='font-bold'>Telefon:</h6>
-									<a href='tel:0312 557 80 81'>0312 557 80 81</a> -{' '}
-									<a href='tel:0532 053 02 06'>0532 053 02 06</a>
+									<a href='tel:0312 557 80 81'>Lorem, ipsum dolor.</a> -{' '}
+									<a href='tel:0532 053 02 06'>Lorem, ipsum dolor.</a>
 								</div>
 								<div>
 									<h6 class='font-bold'>E-posta:</h6>
-									<a href='mailto:info@baysolarteknik.com'>info@baysolarteknik.com</a>
+									<a href='mailto:info@baysolarteknik.com'>Lorem, ipsum dolor.</a>
 								</div>
 							</div>
 						</div>

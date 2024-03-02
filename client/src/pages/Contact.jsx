@@ -1,9 +1,17 @@
-import React from 'react'
+import ContactForm from '../components/contact/ContactForm';
+import ContactHeader from '../components/contact/ContactHeader';
+import ContactInfo from '../components/contact/ContactInfo';
 
 const Contact = () => {
   return (
-    <div>Contact</div>
-  )
+		<div className=''>
+			<ContactHeader />
+			<div className='container lg:flex my-10 mx-auto'>
+				<ContactForm />
+				<ContactInfo />
+			</div>
+		</div>
+  );
 }
 
 export default Contact

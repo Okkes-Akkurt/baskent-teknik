@@ -4,7 +4,7 @@ import { IoMenu } from 'react-icons/io5';
 
 function Navbar() {
 
-	const [ isOpen, setIsOpen ] = useState(true);
+	const [ isOpen, setIsOpen ] = useState(false);
 
 	useEffect(() => {
 		const handleResize = () => {
