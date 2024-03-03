@@ -1,3 +1,4 @@
+import StickyComponent from '../components/StickyComponent';
 import ContactForm from '../components/contact/ContactForm';
 import ContactHeader from '../components/contact/ContactHeader';
 import ContactInfo from '../components/contact/ContactInfo';
@@ -10,6 +11,7 @@ const Contact = () => {
 				<ContactForm />
 				<ContactInfo />
 			</div>
+			<StickyComponent />
 		</div>
   );
 }

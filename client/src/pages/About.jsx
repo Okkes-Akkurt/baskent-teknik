@@ -1,11 +1,12 @@
 import aboutLogo from '../assets/about/aboutLogo.png';
+import StickyComponent from '../components/StickyComponent';
 
 
 const About = () => {
 	return (
 		<div className='bg-gray-100'>
 			<div className='container mx-auto py-12'>
-				<div className='bg-[#001F30]'>
+				<div className='bg-[#001F30] rounded-md'>
 					<img
 						className='max-w-[783px] max-h-[500px] mx-auto'
 						src={aboutLogo}
@@ -33,16 +34,17 @@ const About = () => {
 					çalışıyoruz.
 				</p>
 				<div className='bg-[#001F30] p-8 text-white rounded-md'>
-					<h2 className='text-2xl font-bold mb-4'>Neden Bizi Tercih Etmelisiniz?</h2>
+					<h2 className='text-2xl font-bold mb-4 text-[#EB832A] '>Neden Bizi Tercih Etmelisiniz?</h2>
 					<p className='text-lg'>Başkent Teknik olarak, sizlere şu avantajları sunmaktan gurur duyuyoruz:</p>
 					<ul className='list-disc pl-6 mt-4'>
-						<li>Kaliteli ve güvenilir hizmet</li>
-						<li>Uzman ve deneyimli ekip</li>
-						<li>Yenilikçi çözümler</li>
-						<li>Müşteri odaklı yaklaşım</li>
+						<li className='mt-2 tracking-wide'>Kaliteli ve güvenilir hizmet</li>
+						<li className='mt-2 tracking-wide'>Uzman ve deneyimli ekip</li>
+						<li className='mt-2 tracking-wide'>Yenilikçi çözümler</li>
+						<li className='mt-2 tracking-wide'>Müşteri odaklı yaklaşım</li>
 					</ul>
 				</div>
 			</div>
+			<StickyComponent />
 		</div>
 	);
 };

@@ -1,13 +1,18 @@
 import { useEffect, useState } from 'react';
 import Slider from 'react-slick';
+import  logo1  from "../../assets/examplelogos/1.png";
+import logo2 from '../../assets/examplelogos/2.png';
+import logo3 from '../../assets/examplelogos/3.png';
+import logo4 from '../../assets/examplelogos/4.png';
 
 const PartOfReferences = () => {
 	const [currentSlide, setCurrentSlide] = useState(0);
 
 	const references = [
-		{ id: 1, name: 'Firma 1' },
-		{ id: 2, name: 'Firma 2' },
-		{ id: 3, name: 'Firma 3' },
+		{ id: 1, img:  logo1  },
+		{ id: 2, img:  logo2  },
+		{ id: 3, img: logo3  },
+		{ id: 4, img: logo4  },
 	];
 
 	const sliderSettings = {
@@ -20,26 +25,27 @@ const PartOfReferences = () => {
 		slidesPerRow: 1,
 		autoplay: true,
 		autoplaySpeed: 1500,
+		centerPadding:'50px',
 		responsive: [
 			{
-				breakpoint: 1024, // tablet
+				breakpoint: 1280, // tablet
 				settings: {
 					slidesToShow: 2,
 				},
 			},
 			{
-				breakpoint: 600, // phone
+				breakpoint: 768, // phone
 				settings: {
 					slidesToShow: 1,
-					arrows:false
+					arrows: false,
 				},
 			},
 		],
 	};
 
 	return (
-		<div className='bg-[#F49F05] mx-4 md:mx-8 lg:mx-36 shadow-2xl rounded-2xl my-7 xs:my-14'>
-			<h1 className='text-center text-2xl md:text-4xl p-3'>Referanslarımız</h1>
+		<div className='bg-[#0CC0DF] mx-4 md:mx-8 lg:mx-36 shadow-2xl rounded-2xl my-7 xs:my-14'>
+			<h1 className='text-center text-2xl md:text-4xl pt-10'>Referanslarımız</h1>
 			<div className='py-8 md:py-16 px-4 md:px-8 lg:px-32 text-center mx-auto'>
 				<div className=''>
 					<div className='reference-slider'>
@@ -47,8 +53,12 @@ const PartOfReferences = () => {
 							{references.map((reference) => (
 								<div
 									key={reference.id}
-									className='reference-item max-w-64 md:max-w-full opacity-50  p-4'>
-									<h3 className='text-base md:text-lg bg-slate-200'>{reference.name}</h3>
+									className='reference-item max-w-64 md:max-w-full p-10'>
+									<img
+										src={reference.img}
+										alt=''
+										className='max-w-[200px]'
+									/>
 								</div>
 							))}
 						</Slider>
