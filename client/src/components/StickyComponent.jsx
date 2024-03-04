@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import wpLogo from '../assets/examplelogos/wp.png';
+import wpLogo from '../assets/examplelogos/wp.svg';
 
 const StickyComponent = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +14,7 @@ const StickyComponent = () => {
 				src={wpLogo}
 				alt=''
 				onClick={chooseToggle}
+				className='w-16'
 			/>
 			{isOpen && (
 				<div className='flex flex-col gap-2 absolute items-end -translate-y-1/2 -top-10 right-0'>

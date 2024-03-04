@@ -27,7 +27,7 @@ function Navbar() {
 
 	return (
 		<div className='bg-[#f6b02e]  w-full'>
-			<nav className='container md:mx-auto p-5 md:flex md:items-center md:justify-between '>
+			<nav className='container md:mx-auto p-2 md:flex md:items-center md:justify-between '>
 				<div className='flex items-center justify-between'>
 					<span className='text-2xl font-[poppins] cursor-pointer'>
 						<a
@@ -37,7 +37,7 @@ function Navbar() {
 								<img
 									src={logo}
 									alt='Başkent Teknik'
-									className='rounded-full inline h-14 mr-2'
+									className='rounded-full inline h-16 mr-2'
 								/>
 							</div>
 							<span>
