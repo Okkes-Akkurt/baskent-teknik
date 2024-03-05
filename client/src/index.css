@@ -6,16 +6,7 @@
 
 html{
     background-color: #DEDEE8;
-}
-
-.slick-arrow.slick-prev {
-	left: 3rem !important;
-    z-index: 2;
-}
-
-.slick-arrow.slick-next {
-	right: 3rem !important;
-    z-index: 2;
+    box-sizing: border-box;
 }
 
 @keyframes shake {
@@ -35,4 +26,18 @@ html{
 
 .shake {
   animation: shake 0.5s ease-in-out infinite;
+}
+
+
+.swiper-button-next,.swiper-button-prev{
+  color: white  !important;
+  background-color: rgba(255, 255, 255,0.2) !important;
+  padding: 10px !important;
+  height: 60px !important;
+  width: 60px !important;
+  border-radius: 50%;
+}
+
+.swiper-button-next::after,.swiper-button-prev::after{
+  font-size: 15px !important;
 }

@@ -1,84 +1,70 @@
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import Slider from 'react-slick';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay,Pagination } from 'swiper/modules';
+import 'swiper/swiper-bundle.css';
 import { useEffect, useState } from 'react';
 
 
 
 const Header = () => {
+const slidesItem = [
+	{
+		image: 'https://www.baysolarteknik.com/yonetim/upload/Anasayfa/1f06eb23f3b3d3abfcddbcf94551a9.jpg',
+		title: 'Güneşin Sıcaklığıyla, Enerji Verimliliği',
+		subtitle: 'Baysolar Teknik İle Geleceği Yakalayın.',
+	},
+	{
+		image: 'https://www.baysolarteknik.com/yonetim/upload/Anasayfa/639eaff48c2a397e9d214355385571.jpg',
+		title: 'Teknolojide Yenilik, Enerjide Güneş!',
+		subtitle: 'Geleceğe Işık Tutuyoruz, Güneşle Aydınlanıyoruz!',
+	}
+];
 
-	
-	const settings = {
-		dots: true,
-		infinite: true,
-		autoplay: true,
-		speed: 500,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		initialSlide: 0,
-		responsive: [
-			{
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					infinite: true,
-					dots: true,
-				},
-			},
-			{
-				breakpoint: 600,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					infinite: true,
-					initialSlide: 1,
-					arrows: false,
-				},
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					infinite: true,
-					arrows: false,
-				},
-			},
-		],
-	};
+	const [slides, setSlides] = useState(slidesItem);
+
+	useEffect(() => {
+		setSlides([...slidesItem]);
+	}, [slides]);
+
+
+
 
 	return (
 		<div className='slider-container'>
-			<Slider {...settings}>
-				<div className=''>
-					<img
-						src='https://www.baysolarteknik.com/yonetim/upload/Anasayfa/1f06eb23f3b3d3abfcddbcf94551a9.jpg'
-						alt=''
-						className='w-full'
-					/>
-					<div className='imageText absolute top-1/2 -translate-y-1/2 text-white md:pl-36 pl-8'>
-						<h3 className='text-4xl md:text-6xl font-bold'>
-							Güneşin Sıcaklığıyla,
-							<br /> Enerji Verimliliği
-						</h3>
-						<p className='mt-4 md:mt-8'>Baysolar Teknik İle Geleceği Yakalayın. </p>
-					</div>
+			<Swiper
+				modules={[Navigation, Pagination,Autoplay]}
+				navigation={{
+					prevEl: '.swiper-button-prev',
+					nextEl: '.swiper-button-next',
+				}}
+				speed={1000}
+				autoplay={{
+					delay: 800,
+					disableOnInteraction: false,
+				}}
+				loop={true}
+				className='mySwiper'>
+				{slides.map((slide, index) => (
+					<SwiperSlide key={index}>
+						<div className=''>
+							<img
+								src={slide.image}
+								alt=''
+								className='w-full'
+							/>
+							<div className='imageText absolute top-1/2 -translate-y-1/2 text-white md:pl-36 pl-8'>
+								<h3 className='text-4xl md:text-6xl font-bold'>{slide.title}</h3>
+								<p className='mt-4 md:mt-8'>{slide.subtitle}</p>
+							</div>
+						</div>
+					</SwiperSlide>
+				))}
+				<div className='transparent'>
+					<div class='swiper-button-next'></div>
 				</div>
-				<div className='relative'>
-					<img
-						src='https://www.baysolarteknik.com/yonetim/upload/Anasayfa/639eaff48c2a397e9d214355385571.jpg'
-						alt=''
-						className='w-full'
-					/>
-					<div className='imageText absolute top-1/2 -translate-y-1/2 text-white md:pl-36 pl-8'>
-						<h3 className='text-4xl md:text-6xl font-bold'>
-							Teknolojide Yenilik, <br /> Enerjide Güneş!
-						</h3>
-						<p className='mt-4 md:mt-8 text-lg'>Geleceğe Işık Tutuyoruz, Güneşle Aydınlanıyoruz!</p>
-					</div>
+				<div className='transparent'>
+					<div class='swiper-button-prev'></div>
 				</div>
-			</Slider>
+			</Swiper>
 		</div>
 	);
 };

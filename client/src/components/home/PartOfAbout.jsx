@@ -1,4 +1,3 @@
-import logo from '../../assets/home/image.jpeg';
 
 const PartOfAbout = () => {
 	return (

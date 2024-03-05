@@ -1,4 +1,7 @@
 import React from 'react';
+import phone from '../../assets/contact/phoneIcon.svg'
+import address from '../../assets/contact/address-location-icon.svg';
+import mail from '../../assets/contact/mail.svg';
 
 const ContactInfo = () => {
 	return (
@@ -6,59 +9,83 @@ const ContactInfo = () => {
 			<div className='mb-12'>
 				<div className='title_sections'>
 					<div className='before_title text-4xl font-semibold mb-5'>İletişim Bilgileri</div>
-					<p className='text-2xl'>Daha Fazla Bilgi Almak İçin Bizimle İletişime Geçebilirsiniz.</p>
+					<p className='text-2xl font-light'>Daha Fazla Bilgi Almak İçin Bizimle İletişime Geçebilirsiniz.</p>
 				</div>
 			</div>
 
 			<div className=''>
 				<div className=''>
-					<div className=''>
-						<span className=''></span>
-					</div>
 					<div className='content'>
-						<h3 className='text-2xl font-semibold'>Adres </h3>
-						<p className='text-xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quam!</p>
+						<h3 className='text-2xl font-semibold'>
+							<img
+								className='inline mr-2'
+								width='50'
+								height='50'
+								src={address}
+								alt='address-location'
+							/>
+							Adres
+						</h3>
+						<p className='text-xl'>İstasyon Mah. 2331. Sk. No:4 D:2 06790 Etimesgut/Ankara</p>
+					</div>
+					<div className='mt-4'>
+						<iframe
+							src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.088050831673!2d32.656837476782364!3d39.9394200845506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d339daf98e68fd%3A0xc635d407148ec79c!2s%C4%B0stasyon%2C%202331.%20Sk.%20No%3A4%20D%3A2%2C%2006790%20Etimesgut%2FAnkara!5e0!3m2!1str!2str!4v1709660644548!5m2!1str!2str'
+							width='100%'
+							height='300'
+							allowfullscreen=''
+							loading='lazy'
+							referrerpolicy='no-referrer-when-downgrade'></iframe>
 					</div>
 				</div>
 			</div>
-			<div className='mt-4'></div>
 
 			<div className='contact_box_content style_one'>
 				<div className='contact_box_inner icon_yes'>
-					<div className='icon_bx'>
-						<span className='icon-phone-call'></span>
-					</div>
-					<div className='contnet'>
-						<h3 className='text-2xl font-semibold'>Telefon </h3>
-						<p className='text-xl'>
+					<div className='contnet my-12'>
+						<h3 className='text-2xl font-semibold'>
+							<img
+								className='inline mr-2'
+								width='50'
+								height='50'
+								src={phone}
+								alt='apple-phone'
+							/>
+							Telefon
+						</h3>
+						<p className='text-xl flex flex-col items-start justify-between'>
 							<a
-								href='tel:0312 557 80 81'
-								className='text-blue-500'>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quam!
-							</a>{' '}
-							-{' '}
+								href='tel:05349198246'
+								className='text-[#001F30] hover:text-[#F7B02F] hover:scale-105 transition-all duration-300 my-3'>
+								Elektrik - 05349198246
+							</a>
 							<a
-								href='tel:0532 053 02 06'
-								className='text-blue-500'>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quam!
+								href='tel:05077780943'
+								className='text-[#001F30] hover:text-[#F7B02F] hover:scale-105 transition-all duration-300'>
+								Sıhhi Tesisat - 05077780943
 							</a>
 						</p>
 					</div>
 				</div>
 			</div>
-			<div className='mt-4'></div>
 
 			<div className='contact_box_content style_one'>
 				<div className='contact_box_inner icon_yes'>
-					<div className='icon_bx'>
-						<span className='icon-phone-call'></span>
-					</div>
-					<div className='contnet'>
-						<h3 className='text-2xl font-semibold'>E-Posta </h3>
+					<div className='contnet mb-12'>
+						<h3 className='text-2xl font-semibold'>
+							<img
+								className='inline mr-3'
+								width='50'
+								height='50'
+								src={mail}
+								alt='address-location'
+							/>
+							E-Posta
+						</h3>
 						<p className='text-xl'>
 							<a
 								href='mailto:info@Başkentteknik.com'
-								className='text-blue-500'>
+								className='text-black'>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, soluta?
 							</a>
 						</p>
@@ -74,7 +101,7 @@ const ContactInfo = () => {
 					</div>
 					<div className='contnet'>
 						<h3 className='text-2xl font-semibold'> Çalışma Saatleri </h3>
-						<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, nisi! </p>
+						<p>Haftaiçi ve Cumartesi 08.00 - 17.00 </p>
 					</div>
 				</div>
 			</div>
