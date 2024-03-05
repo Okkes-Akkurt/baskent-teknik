@@ -1,9 +1,22 @@
-import React from 'react'
+const express = require('express');
+const dotenv = require('dotenv');
+const cors = require('cors');
+const adminRoute= require('./routes/adminRoute') ;
 
-const server = () => {
-  return (
-    <div>server</div>
-  )
-}
+dotenv.config();
+const app = express();
 
-export default server
+const PORT =  process.env.PORT || 3000;
+
+app.use(cors());
+app.use(express.urlencoded({ extended: true }));
+
+/* app.connect(process.env.PORT, () => {
+  console.log('Connected to the DB ')
+}); */
+
+app.use('/admin-kayıt', adminRoute);
+
+app.listen(PORT, () => {
+	console.log(`Server is running on port ${PORT}`);
+});
