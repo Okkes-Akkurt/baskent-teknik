@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 
 const ContactForm = () => {
+
+	const [success, setSuccess] = useState(false);
+
 	const formik = useFormik({
 		initialValues: {
 			name: '',
@@ -14,7 +17,9 @@ const ContactForm = () => {
 		},
 		validationSchema: Yup.object({
 			name: Yup.string().required('Bu alan zorunludur'),
-			phoneNumber: Yup.string().required('Bu alan zorunludur'),
+			phoneNumber: Yup.string()
+				.required('Bu alan zorunludur')
+				.matches(/^[0-9]{10}$/, 'Telefon numarası 10 haneli olmalıdır ve sadece sayı giriniz.'),
 			email: Yup.string().email('Geçerli bir e-posta adresi giriniz').required('Bu alan zorunludur'),
 			subject: Yup.string().required('Bu alan zorunludur'),
 			message: Yup.string().required('Bu alan zorunludur'),
@@ -25,6 +30,7 @@ const ContactForm = () => {
 
 				if (response.status === 200) {
 					console.log('E-posta başarıyla gönderildi!');
+					setSuccess(true);
 					formik.resetForm();
 				} else {
 					console.error('E-posta gönderme hatası:', response.statusText);
@@ -163,6 +169,7 @@ const ContactForm = () => {
 					className='py-3 px-5 text-lg font-medium text-center bg-[#F7B02F] hover:bg-[#fbbf50] transition duration-300 rounded-lg w-full focus:ring-4 focus:outline-none '>
 					Gönder
 				</button>
+				{success && <p className='p-3 border-lime-600'> Mesajınız iletildi. </p>}
 			</form>
 		</div>
 	);
