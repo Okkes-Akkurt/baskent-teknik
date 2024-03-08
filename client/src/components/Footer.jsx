@@ -99,25 +99,25 @@ const Footer = () => {
 							<div class='mt-8'>
 								<ul>
 									<li className='mt-2 hover:text-[#EB832A] hover:scale-110 transition-all duration-200'>
-										<a href=''>Güneş Enerjisi</a>
+										<p>Güneş Enerjisi</p>
 									</li>
 									<li className='mt-2 hover:text-[#EB832A] hover:scale-110 transition-all duration-200'>
-										<a href=''>Güneş Kollektörü</a>
+										<p>Resirkülasyon Pompası</p>
 									</li>
 									<li className='mt-2 hover:text-[#EB832A] hover:scale-110 transition-all duration-200'>
-										<a href=''>Isı Pompası</a>
+										<p>Temel Topraklama</p>
 									</li>
 									<li className='mt-2 hover:text-[#EB832A] hover:scale-110 transition-all duration-200'>
-										<a href=''>Enerji Sistemleri</a>
+										<p>Genleşme Tankı</p>
 									</li>
 									<li className='mt-2 hover:text-[#EB832A] hover:scale-110 transition-all duration-200'>
-										<a href=''>Moduler Su Depoları</a>
+										<p>Moduler Su Depoları</p>
 									</li>
 									<li className='mt-2 hover:text-[#EB832A] hover:scale-110 transition-all duration-200'>
-										<a href=''>Akümülasyon Tankı</a>
+										<p>Kuvvetli Akım Kablo Çekimi</p>
 									</li>
 									<li className='mt-2 hover:text-[#EB832A] hover:scale-110 transition-all duration-200'>
-										<a href=''>Serpantinli Emaye Boyler</a>
+										<p>Boyler</p>
 									</li>
 								</ul>
 							</div>
