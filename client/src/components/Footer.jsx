@@ -62,9 +62,9 @@ const Footer = () => {
 								<div>
 									<h6 class='font-bold'>E-posta:</h6>
 									<a
-										href='mailto:Lorem, ipsum dolor'
+										href='mailto:info@baskentteknik.com.tr'
 										className='hover:text-[#EB832A] hover:scale-110 transition-all duration-200'>
-										Lorem, ipsum dolor.
+										info@baskentteknik.com.tr
 									</a>
 								</div>
 							</div>
