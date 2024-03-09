@@ -34,7 +34,7 @@ const slidesItem = [
 	return (
 		<div className='slider-container'>
 			<Swiper
-				modules={[Navigation, Pagination,Autoplay]}
+				modules={[Navigation, Pagination, Autoplay]}
 				navigation={{
 					prevEl: '.swiper-button-prev',
 					nextEl: '.swiper-button-next',
@@ -45,7 +45,8 @@ const slidesItem = [
 					disableOnInteraction: false,
 				}}
 				loop={true}
-				className='mySwiper'>
+				className='mySwiper'
+				lazy='true'>
 				{slides.map((slide, index) => (
 					<SwiperSlide key={index}>
 						<div className=''>
@@ -53,6 +54,7 @@ const slidesItem = [
 								src={slide.image}
 								alt=''
 								className='w-full'
+								loading='lazy'
 							/>
 							<div className='imageText absolute top-1/2 -translate-y-1/2 text-white md:pl-36 pl-8'>
 								<h3 className='text-4xl md:text-6xl font-bold'>{slide.title}</h3>
