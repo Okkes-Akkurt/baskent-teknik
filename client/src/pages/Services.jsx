@@ -36,7 +36,7 @@ const Services = () => {
 	];
 
 	return (
-		<div className='my-14 py-7 md:block'>
+		<div className='my-14 py-7 md:block sm:mx-auto px-5'>
 			<h1 className='text-xl md:text-2xl lg:text-3xl font-bold text-[#EC8329] mb-4 lg:mb-7'>Hizmetlerimiz</h1>
 			<div className=''>
 				{serviceData.map((category, index) => (
