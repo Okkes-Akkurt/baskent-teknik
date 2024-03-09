@@ -45,10 +45,11 @@ const slidesItem = [
 					disableOnInteraction: false,
 				}}
 				loop={true}
-				className='mySwiper'
-				lazy='true'>
+				className='mySwiper'>
 				{slides.map((slide, index) => (
-					<SwiperSlide key={index}>
+					<SwiperSlide
+						key={index}
+						lazy='true'>
 						<div className=''>
 							<img
 								src={slide.image}
