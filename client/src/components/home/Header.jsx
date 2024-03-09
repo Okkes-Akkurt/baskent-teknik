@@ -49,7 +49,7 @@ const slidesItem = [
 				{slides.map((slide, index) => (
 					<SwiperSlide
 						key={index}
-						lazy='true'>
+						lazy={true}>
 						<div className=''>
 							<img
 								src={slide.image}
