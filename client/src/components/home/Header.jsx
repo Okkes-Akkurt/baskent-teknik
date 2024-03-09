@@ -22,8 +22,11 @@ const slidesItem = [
 	const [slides, setSlides] = useState(slidesItem);
 
 	useEffect(() => {
-		setSlides([...slidesItem]);
-	}, [slides]);
+		const hasChanged = slidesItem.length !== slides.length;
+		if (hasChanged) {
+			setSlides([...slidesItem]);
+		}
+	}, [slidesItem, slides]);
 
 
 

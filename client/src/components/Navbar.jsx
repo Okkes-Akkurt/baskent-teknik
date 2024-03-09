@@ -1,10 +1,16 @@
 import { useEffect, useState } from 'react';
 import logo from '../assets/logo.svg';
 import { IoMenu } from 'react-icons/io5';
+import { useAuth } from "../context/AuthContext.jsx";
 
 function Navbar() {
 
+	const { logout } = useAuth();
 	const [ isOpen, setIsOpen ] = useState(false);
+	const isLoggedIn = localStorage.getItem('isLoggedIn') || null;
+
+
+
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -23,6 +29,12 @@ function Navbar() {
 	const toggleMenu = () => {
 		setIsOpen((prev) => !prev);
 	};
+
+	const adminLogout=()=> {
+		logout();
+		localStorage.removeItem('isLoggedIn')
+		window.location.href = '/';
+	}
 
 
 	return (
@@ -74,6 +86,24 @@ function Navbar() {
 							İletişim
 						</a>
 					</li>
+					{isLoggedIn && (
+						<>
+							<li className='my-6 md:my-0'>
+								<a
+									href='/adminPanel'
+									className='text-xl duration-500 border-[#47B9E5]  hover:border-b-4 p-2'>
+									Admin Panel
+								</a>
+							</li>
+							<li className='my-6 md:my-0'>
+								<button
+									className='text-xl duration-500 border-[#47B9E5]  hover:border-b-4 p-2'
+									onClick={adminLogout}>
+									Çıkış
+								</button>
+							</li>
+						</>
+					)}
 				</ul>
 			</nav>
 		</div>

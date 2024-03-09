@@ -7,6 +7,9 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import AdminPanel from './pages/AdminPanel';
+import Login from './pages/Login';
+import { AuthProvider } from './context/AuthContext';
 
 
 const router = createBrowserRouter([
@@ -22,12 +25,22 @@ const router = createBrowserRouter([
 		path: '/contact',
 		element: <Contact />,
 	},
+	{
+		path: '/adminPanel',
+		element: <AdminPanel />,
+	},
+	{
+		path: '/admin-giris',
+		element: <Login />,
+	},
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.Fragment>
-		<Navbar />
-		<RouterProvider router={router} />
-		<Footer />
+		<AuthProvider>
+			<Navbar />
+			<RouterProvider router={router} />
+			<Footer />
+		</AuthProvider>
 	</React.Fragment>,
 );
