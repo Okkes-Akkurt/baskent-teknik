@@ -50,7 +50,6 @@ const PartOfReferences = () => {
 					}}>
 					{references.map((content) => (
 						<SwiperSlide
-							lazy={false}
 							key={content.id}
 							className='mySwiper p-8'>
 							<div className='p-5 bg-white shadow-lg bg-opacity-70 shadow-slate-700 rounded-lg'>
