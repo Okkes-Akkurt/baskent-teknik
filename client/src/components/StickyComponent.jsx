@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import wpLogo from '../assets/examplelogos/wp.svg';
+import wpLogo from '../assets/wp.svg';
 
 const StickyComponent = () => {
 	const [isOpen, setIsOpen] = useState(false);

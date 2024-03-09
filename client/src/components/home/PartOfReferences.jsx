@@ -1,22 +1,22 @@
 import { Swiper, SwiperSlide, } from 'swiper/react';
 import { Navigation, Pagination,Autoplay } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
-import  logo1  from "../../assets/examplelogos/1.png";
-import logo2 from '../../assets/examplelogos/2.png';
-import logo3 from '../../assets/examplelogos/3.png';
-import logo4 from '../../assets/examplelogos/4.png';
+import  logo1  from "../../assets/logos/1.png";
+import logo2 from '../../assets/logos/2.png';
+import logo3 from '../../assets/logos/3.png';
+import logo4 from '../../assets/logos/4.png';
 
 const PartOfReferences = () => {
 
 	const references = [
-		{ id: 1, img: logo1 },
-		{ id: 2, img: logo2 },
-		{ id: 3, img: logo3 },
-		{ id: 4, img: logo4 },
-		{ id: 1, img: logo1 },
-		{ id: 2, img: logo2 },
-		{ id: 3, img: logo3 },
-		{ id: 4, img: logo4 },
+		{ img: logo1, name: 'abc' },
+		{ img: logo2, name: 'abc' },
+		{ img: logo3, name: 'abc' },
+		{ img: logo4, name: 'abc' },
+		{ img: logo1, name: 'abc' },
+		{ img: logo2, name: 'abc' },
+		{ img: logo3, name: 'abc' },
+		{ img: logo4, name: 'abc' },
 	];
 
 
@@ -48,9 +48,10 @@ const PartOfReferences = () => {
 							spaceBetween: 30,
 						},
 					}}>
-					{references.map((content) => (
+					{references.map((content, i) => (
 						<SwiperSlide
-							key={content.id}
+							lazy={false}
+							key={i}
 							className='mySwiper p-8'>
 							<div className='p-5 bg-white shadow-lg bg-opacity-70 shadow-slate-700 rounded-lg'>
 								<img
@@ -59,8 +60,7 @@ const PartOfReferences = () => {
 									loading='lazy'
 								/>
 								<div>
-									<h3 className='text-xl sm:text-sm lg:text-xl my-2'>abc</h3>
-									<p className='text-xl sm:text-sm lg:text-lg'>Lorem, ipsum dolor.</p>
+									<h3 className='text-xl sm:text-sm lg:text-xl my-3'>{content.name}</h3>
 								</div>
 							</div>
 						</SwiperSlide>

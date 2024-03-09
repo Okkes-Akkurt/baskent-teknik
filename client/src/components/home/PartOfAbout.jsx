@@ -41,7 +41,7 @@ const PartOfAbout = () => {
 						className='rounded-lg w-full shadow-2xl'
 					/>
 				</div>
-				<div class='quotes bg-[#EB832A] absolute lg:bottom-40  ml-2 px-4 lg:px-12 py-3 lg:py-6 rounded-xl max-w-sm shadow-2xl md:bottom-0 bottom-5 sm:-bottom-40 left-1/4 md:left-3'>
+				<div className='quotes bg-[#EB832A] absolute lg:bottom-40  ml-2 px-4 lg:px-12 py-3 lg:py-6 rounded-xl max-w-sm shadow-2xl md:bottom-0 bottom-5 sm:-bottom-40 left-1/4 md:left-3'>
 					<h6 className='text-white text-base lg:text-2xl'>Elektrikte ve Tesisatta Profesyonel Çözümler</h6>
 					<p className='text-slate-200 text-sm lg:text-base'>Başkent Teknİk</p>
 				</div>

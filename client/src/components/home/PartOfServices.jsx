@@ -10,9 +10,9 @@ const PartOfServices = () => {
 				<div className='left-side mb-10'>
 					<h3 className='text-xl md:text-2xl font-bold text-[#011F30] mb-4 lg:mb-7'>Sıhhi tesisat</h3>
 					<ul className='space-y-1 text-[#011F30] text-md md:text-xl flex gap-y-5 gap-x-5 flex-wrap'>
-						<li class='flex items-center  md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
+						<li className='flex items-center  md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
 							<svg
-								class='w-3.5 h-3.5 me-2 text-green-600 flex-shrink-0'
+								className='w-3.5 h-3.5 me-2 text-green-600 flex-shrink-0'
 								aria-hidden='true'
 								xmlns='http://www.w3.org/2000/svg'
 								fill='currentColor'
@@ -21,9 +21,9 @@ const PartOfServices = () => {
 							</svg>
 							Boyler
 						</li>
-						<li class='flex items-center  md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
+						<li className='flex items-center  md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
 							<svg
-								class='w-3.5 h-3.5 me-2 text-green-600  flex-shrink-0'
+								className='w-3.5 h-3.5 me-2 text-green-600  flex-shrink-0'
 								aria-hidden='true'
 								xmlns='http://www.w3.org/2000/svg'
 								fill='currentColor'
@@ -32,9 +32,9 @@ const PartOfServices = () => {
 							</svg>{' '}
 							Plakalı eşanjör
 						</li>
-						<li class='flex items-center  md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
+						<li className='flex items-center  md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
 							<svg
-								class='w-3.5 h-3.5 me-2 text-green-600  flex-shrink-0'
+								className='w-3.5 h-3.5 me-2 text-green-600  flex-shrink-0'
 								aria-hidden='true'
 								xmlns='http://www.w3.org/2000/svg'
 								fill='currentColor'
@@ -43,9 +43,9 @@ const PartOfServices = () => {
 							</svg>
 							Daire giriş istasyonu
 						</li>
-						<li class='flex items-center  md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
+						<li className='flex items-center  md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
 							<svg
-								class='w-3.5 h-3.5 me-2 text-green-600  flex-shrink-0'
+								className='w-3.5 h-3.5 me-2 text-green-600  flex-shrink-0'
 								aria-hidden='true'
 								xmlns='http://www.w3.org/2000/svg'
 								fill='currentColor'
@@ -54,9 +54,9 @@ const PartOfServices = () => {
 							</svg>
 							Modüler su deposu
 						</li>
-						<li class='flex items-center  md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
+						<li className='flex items-center  md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
 							<svg
-								class='w-3.5 h-3.5 me-2 text-green-600  flex-shrink-0'
+								className='w-3.5 h-3.5 me-2 text-green-600  flex-shrink-0'
 								aria-hidden='true'
 								xmlns='http://www.w3.org/2000/svg'
 								fill='currentColor'
@@ -65,9 +65,9 @@ const PartOfServices = () => {
 							</svg>
 							Hidrafor
 						</li>
-						<li class='flex items-center  md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
+						<li className='flex items-center  md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
 							<svg
-								class='w-3.5 h-3.5 me-2 text-green-600  flex-shrink-0'
+								className='w-3.5 h-3.5 me-2 text-green-600  flex-shrink-0'
 								aria-hidden='true'
 								xmlns='http://www.w3.org/2000/svg'
 								fill='currentColor'
@@ -78,7 +78,7 @@ const PartOfServices = () => {
 						</li>
 					</ul>
 					<button className='border bg-[#EB832A] rounded-br-lg rounded-tl-lg py-2 px-5 mt-2 lg:mt-4 text-base lg:text-xl text-white hover:bg-slate-200 hover:text-[#EC8329] shadow-lg border-slate-300'>
-						<a href='/about'>
+						<a href='/services'>
 							Daha fazla <span className='mx-2'> &rarr;</span>
 						</a>
 					</button>
@@ -87,9 +87,9 @@ const PartOfServices = () => {
 				<div className='right-side'>
 					<h3 className='text-xl md:text-2xl font-bold text-[#011F30] mb-4 lg:mb-7'>Elektirik</h3>
 					<ul className='space-y-1 text-[#011F30] list-inside text-lg md:text-xl flex gap-y-5 gap-x-5 flex-wrap'>
-						<li class='flex items-center md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
+						<li className='flex items-center md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
 							<svg
-								class='w-3.5 h-3.5 me-2 text-green-600 flex-shrink-0'
+								className='w-3.5 h-3.5 me-2 text-green-600 flex-shrink-0'
 								aria-hidden='true'
 								xmlns='http://www.w3.org/2000/svg'
 								fill='currentColor'
@@ -98,9 +98,9 @@ const PartOfServices = () => {
 							</svg>
 							Elektrik arıza
 						</li>
-						<li class='flex items-center md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
+						<li className='flex items-center md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
 							<svg
-								class='w-3.5 h-3.5 me-2 text-green-600  flex-shrink-0'
+								className='w-3.5 h-3.5 me-2 text-green-600  flex-shrink-0'
 								aria-hidden='true'
 								xmlns='http://www.w3.org/2000/svg'
 								fill='currentColor'
@@ -109,9 +109,9 @@ const PartOfServices = () => {
 							</svg>{' '}
 							Led montajı
 						</li>
-						<li class='flex items-center md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
+						<li className='flex items-center md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
 							<svg
-								class='w-3.5 h-3.5 me-2 text-green-600  flex-shrink-0'
+								className='w-3.5 h-3.5 me-2 text-green-600  flex-shrink-0'
 								aria-hidden='true'
 								xmlns='http://www.w3.org/2000/svg'
 								fill='currentColor'
@@ -120,9 +120,9 @@ const PartOfServices = () => {
 							</svg>
 							Tava montajı
 						</li>
-						<li class='flex items-center md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
+						<li className='flex items-center md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
 							<svg
-								class='w-3.5 h-3.5 me-2 text-green-600  flex-shrink-0'
+								className='w-3.5 h-3.5 me-2 text-green-600  flex-shrink-0'
 								aria-hidden='true'
 								xmlns='http://www.w3.org/2000/svg'
 								fill='currentColor'
@@ -131,9 +131,9 @@ const PartOfServices = () => {
 							</svg>
 							Priz,avize,lamba,sigorta montajı
 						</li>
-						<li class='flex items-center md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
+						<li className='flex items-center md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
 							<svg
-								class='w-3.5 h-3.5 me-2 text-green-600  flex-shrink-0'
+								className='w-3.5 h-3.5 me-2 text-green-600  flex-shrink-0'
 								aria-hidden='true'
 								xmlns='http://www.w3.org/2000/svg'
 								fill='currentColor'
@@ -142,9 +142,9 @@ const PartOfServices = () => {
 							</svg>
 							Hoparlor
 						</li>
-						<li class='flex items-center md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
+						<li className='flex items-center md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
 							<svg
-								class='w-3.5 h-3.5 me-2 text-green-600  flex-shrink-0'
+								className='w-3.5 h-3.5 me-2 text-green-600  flex-shrink-0'
 								aria-hidden='true'
 								xmlns='http://www.w3.org/2000/svg'
 								fill='currentColor'

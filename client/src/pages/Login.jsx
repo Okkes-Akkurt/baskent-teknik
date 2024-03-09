@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const Login = () => {
-    const { login } = useAuth();
+	const { login } = useAuth();
 	const navigate = useNavigate();
 	const [formData, setFormData] = useState({
 		email: '',
@@ -28,11 +28,14 @@ const Login = () => {
 				.post('http://localhost:3000/admin-giris', formData)
 				.then((res) => {
 					console.log(res.data);
-                    login();
-                    const isLoggedIn = res.data.isLoggedIn;
-                    localStorage.setItem('isLoggedIn', isLoggedIn);
-                    navigate('/adminPanel');
-
+					if (res.data.message !== 'Invalid credentials.') {
+						login();
+						const isLoggedIn = res.data.isLoggedIn;
+						localStorage.setItem('isLoggedIn', isLoggedIn);
+						navigate('/adminPanel');
+					} else {
+						alert('Şifre veya parolayı hatalı girdiniz.');
+					}
 				})
 				.catch((error) => {
 					console.error('Error:', error);
@@ -41,10 +44,9 @@ const Login = () => {
 			axios.post('http://localhost:3000/admin-kayit', formData).then((res) => {
 				console.log(res.data);
 			});
-                alert('Kaydınız başarıyla oluşturuldu')
-				.catch((error) => {
-					console.error('Error:', error);
-				});
+			alert('Kaydınız başarıyla oluşturuldu').catch((error) => {
+				console.error('Error:', error);
+			});
 		} else {
 			alert('Lütfen bir e-posta adresi giriniz.');
 		}
@@ -178,7 +180,7 @@ const Login = () => {
 						<button
 							type='submit'
 							className='bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800'>
-							Giriş Yap
+							Kayıt Ol
 						</button>
 					</form>
 					<p>

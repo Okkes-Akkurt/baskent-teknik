@@ -52,7 +52,7 @@ function Navbar() {
 									className='rounded-full inline h-16 mr-2'
 								/>
 							</div>
-							<span>
+							<span className='lg:block hidden'>
 								Başkent
 								<br />
 								Teknik
@@ -64,25 +64,39 @@ function Navbar() {
 					</span>
 				</div>
 
-				<ul className={`md:flex md:items-center gap-7 block ${isOpen ? 'block' : 'hidden'}`}>
+				<ul className={`md:flex md:items-center gap-7 md:gap-4 block ${isOpen ? 'block' : 'hidden'}`}>
 					<li className='my-6 md:my-0'>
 						<a
 							href='/'
-							className='text-xl duration-500 border-[#47B9E5]  hover:border-b-4 p-2'>
+							className='text-xl md:text-lg lg:text-xl duration-500 border-[#47B9E5]  hover:border-b-4 p-2'>
 							Anasayfa
 						</a>
 					</li>
 					<li className='my-6 md:my-0'>
 						<a
 							href='/about'
-							className='text-xl duration-500 border-[#47B9E5]  hover:border-b-4 p-2'>
+							className='text-xl md:text-lg lg:text-xl duration-500 border-[#47B9E5]  hover:border-b-4 p-2'>
 							Hakkımızda
 						</a>
 					</li>
 					<li className='my-6 md:my-0'>
 						<a
+							href='/services'
+							className='text-xl md:text-lg lg:text-xl duration-500 border-[#47B9E5]  hover:border-b-4 p-2'>
+							Hizmetlerimiz
+						</a>
+					</li>
+					<li className='my-6 md:my-0'>
+						<a
+							href='/references'
+							className='text-xl md:text-lg lg:text-xl duration-500 border-[#47B9E5]  hover:border-b-4 p-2'>
+							Referanslarımız
+						</a>
+					</li>
+					<li className='my-6 md:my-0'>
+						<a
 							href='/contact'
-							className='text-xl duration-500 border-[#47B9E5]  hover:border-b-4 p-2'>
+							className='text-xl md:text-lg lg:text-xl duration-500 border-[#47B9E5]  hover:border-b-4 p-2'>
 							İletişim
 						</a>
 					</li>
@@ -91,13 +105,13 @@ function Navbar() {
 							<li className='my-6 md:my-0'>
 								<a
 									href='/adminPanel'
-									className='text-xl duration-500 border-[#47B9E5]  hover:border-b-4 p-2'>
-									Admin Panel
+									className='text-xl md:text-lg lg:text-xl duration-500 border-[#47B9E5]  hover:border-b-4 p-2'>
+									Admin
 								</a>
 							</li>
 							<li className='my-6 md:my-0'>
 								<button
-									className='text-xl duration-500 border-[#47B9E5]  hover:border-b-4 p-2'
+									className='text-xl md:text-lg lg:text-xl duration-500 border-[#47B9E5]  hover:border-b-4 p-2'
 									onClick={adminLogout}>
 									Çıkış
 								</button>

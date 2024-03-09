@@ -47,9 +47,7 @@ const slidesItem = [
 				loop={true}
 				className='mySwiper'>
 				{slides.map((slide, index) => (
-					<SwiperSlide
-						key={index}
-						>
+					<SwiperSlide key={index}>
 						<div className=''>
 							<img
 								src={slide.image}
@@ -65,10 +63,10 @@ const slidesItem = [
 					</SwiperSlide>
 				))}
 				<div className='transparent'>
-					<div class='swiper-button-next'></div>
+					<div className='swiper-button-next'></div>
 				</div>
 				<div className='transparent'>
-					<div class='swiper-button-prev'></div>
+					<div className='swiper-button-prev'></div>
 				</div>
 			</Swiper>
 		</div>

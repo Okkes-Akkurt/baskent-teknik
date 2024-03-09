@@ -33,9 +33,9 @@ const ContactInfo = () => {
 							src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.088050831673!2d32.656837476782364!3d39.9394200845506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d339daf98e68fd%3A0xc635d407148ec79c!2s%C4%B0stasyon%2C%202331.%20Sk.%20No%3A4%20D%3A2%2C%2006790%20Etimesgut%2FAnkara!5e0!3m2!1str!2str!4v1709660644548!5m2!1str!2str'
 							width='100%'
 							height='300'
-							allowfullscreen=''
+							allowFullScreen=''
 							loading='lazy'
-							referrerpolicy='no-referrer-when-downgrade'></iframe>
+							referrerPolicy='no-referrer-when-downgrade'></iframe>
 					</div>
 				</div>
 			</div>
@@ -132,10 +132,10 @@ const ContactInfo = () => {
 									gradientUnits='userSpaceOnUse'>
 									<stop
 										offset='0'
-										stop-color='#2aa4f4'></stop>
+										stopColor='#2aa4f4'></stop>
 									<stop
 										offset='1'
-										stop-color='#007ad9'></stop>
+										stopColor='#007ad9'></stop>
 								</linearGradient>
 								<path
 									fill='url(#Ld6sqrtcxMyckEl6xeDdMa_uLWV5A9vXIPu_gr1)'
@@ -170,16 +170,16 @@ const ContactInfo = () => {
 									gradientUnits='userSpaceOnUse'>
 									<stop
 										offset='0'
-										stop-color='#4b4b4b'></stop>
+										stopColor='#4b4b4b'></stop>
 									<stop
 										offset='.247'
-										stop-color='#3e3e3e'></stop>
+										stopColor='#3e3e3e'></stop>
 									<stop
 										offset='.686'
-										stop-color='#2b2b2b'></stop>
+										stopColor='#2b2b2b'></stop>
 									<stop
 										offset='1'
-										stop-color='#252525'></stop>
+										stopColor='#252525'></stop>
 								</linearGradient>
 								<path
 									fill='url(#U8Yg0Q5gzpRbQDBSnSCfPa_yoQabS8l0qpr_gr1)'
@@ -219,25 +219,25 @@ const ContactInfo = () => {
 									gradientUnits='userSpaceOnUse'>
 									<stop
 										offset='0'
-										stop-color='#fd5'></stop>
+										stopColor='#fd5'></stop>
 									<stop
 										offset='.328'
-										stop-color='#ff543f'></stop>
+										stopColor='#ff543f'></stop>
 									<stop
 										offset='.348'
-										stop-color='#fc5245'></stop>
+										stopColor='#fc5245'></stop>
 									<stop
 										offset='.504'
-										stop-color='#e64771'></stop>
+										stopColor='#e64771'></stop>
 									<stop
 										offset='.643'
-										stop-color='#d53e91'></stop>
+										stopColor='#d53e91'></stop>
 									<stop
 										offset='.761'
-										stop-color='#cc39a4'></stop>
+										stopColor='#cc39a4'></stop>
 									<stop
 										offset='.841'
-										stop-color='#c837ab'></stop>
+										stopColor='#c837ab'></stop>
 								</radialGradient>
 								<path
 									fill='url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)'
@@ -251,11 +251,11 @@ const ContactInfo = () => {
 									gradientUnits='userSpaceOnUse'>
 									<stop
 										offset='0'
-										stop-color='#4168c9'></stop>
+										stopColor='#4168c9'></stop>
 									<stop
 										offset='.999'
-										stop-color='#4168c9'
-										stop-opacity='0'></stop>
+										stopColor='#4168c9'
+										stopOpacity='0'></stop>
 								</radialGradient>
 								<path
 									fill='url(#yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2)'
