@@ -13,7 +13,6 @@ import { AuthProvider } from './context/AuthContext';
 import References from './pages/References';
 import Services from './pages/Services';
 
-
 const router = createBrowserRouter([
 	{
 		path: '/',

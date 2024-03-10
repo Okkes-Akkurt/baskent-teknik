@@ -6,7 +6,6 @@ const registerAdmin = async (req, res) => {
 	console.log('Received request body:', req.body);
 
 	try {
-
 		if (!password || typeof password !== 'string') {
 			console.error('Invalid password:', password);
 			return res.status(400).json({ error: 'Invalid password.' });
@@ -24,8 +23,6 @@ const registerAdmin = async (req, res) => {
 		res.status(500).json({ error: 'Error registering admin.' });
 	}
 };
-
-
 
 const loginAdmin = async (req, res) => {
 	try {
@@ -49,7 +46,5 @@ const loginAdmin = async (req, res) => {
 		res.status(500).json({ error: error.message });
 	}
 };
-
-
 
 module.exports = { loginAdmin, registerAdmin };
