@@ -4,7 +4,6 @@ import * as Yup from 'yup';
 import axios from 'axios';
 
 const ContactForm = () => {
-
 	const [success, setSuccess] = useState(false);
 
 	const formik = useFormik({
@@ -26,17 +25,24 @@ const ContactForm = () => {
 		}),
 		onSubmit: async (values) => {
 			try {
-				const response = await axios.post('https://your-server-endpoint.com/send-email', values);
+				const response = await axios.post('http://localhost:3000/send-mail', {
+					to_email: 'info@baskentteknik.com.tr',
+					from_name: values.name,
+					from_phone: values.phoneNumber,
+					from_email: values.email,
+					subject: values.subject,
+					message: values.message,
+				});
 
 				if (response.status === 200) {
-					console.log('E-posta başarıyla gönderildi!');
+					console.log('Form data sent successfully!');
 					setSuccess(true);
 					formik.resetForm();
 				} else {
-					console.error('E-posta gönderme hatası:', response.statusText);
+					console.error('Failed to send form data. Server returned:', response.status, response.statusText);
 				}
 			} catch (error) {
-				console.error('İstek hatası:', error.message);
+				console.error('Error sending form data:', error.message);
 			}
 		},
 	});

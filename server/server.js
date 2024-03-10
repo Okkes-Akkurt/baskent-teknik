@@ -6,6 +6,7 @@ const conn = require('./db.js');
 const photoRoute=require('./routes/photoRoute.js')
 const logoRoute = require('./routes/logoRoute.js');
 const path = require('path');
+const nodemailer = require('nodemailer');
 dotenv.config();
 
 // Connect to the DB
@@ -37,6 +38,38 @@ app.use((req, res, next) => {
 app.use((err, req, res, next) => {
 	console.error(err.stack);
 	res.status(500).send('Internal Server Error');
+});
+
+
+const transporter = nodemailer.createTransport({
+	service: '',
+	auth: {
+		user: 'info@baskentteknik.com.tr',
+		pass: '',
+	},
+});
+
+app.post('/send-email', (req, res) => {
+	const { to_email, from_name, from_phone, from_email, subject, message } = req.body;
+
+	// Setup email data with unicode symbols
+	const mailOptions = {
+		from: `"${from_name}" <${from_email}>`,
+		to: to_email,
+		subject: subject,
+		text: `${from_name} (${from_phone}): ${message}`,
+	};
+
+	// Send mail with defined transport object
+	transporter.sendMail(mailOptions, (error, info) => {
+		if (error) {
+			console.error('Error sending email:', error);
+			return res.status(500).json({ success: false, error: 'Failed to send email' });
+		}
+
+		console.log('Email sent:', info.response);
+		return res.status(200).json({ success: true, message: 'Email sent successfully' });
+	});
 });
 
 app.listen(PORT, () => {
