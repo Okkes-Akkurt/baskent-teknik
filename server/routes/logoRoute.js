@@ -8,6 +8,6 @@ const logoUpload = multerConfig('logo');
 router.post('/', logoUpload.single('file'), logoController.uploadLogo);
 
 // Get all logos route
-router.get('/', logoController.getAllLogos);
+router.get('/all', logoController.getAllLogos);
 
 module.exports = router;

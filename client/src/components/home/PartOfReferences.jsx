@@ -5,19 +5,29 @@ import  logo1  from "../../assets/logos/1.png";
 import logo2 from '../../assets/logos/2.png';
 import logo3 from '../../assets/logos/3.png';
 import logo4 from '../../assets/logos/4.png';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const PartOfReferences = () => {
 
-	const references = [
-		{ img: logo1, name: 'abc' },
-		{ img: logo2, name: 'abc' },
-		{ img: logo3, name: 'abc' },
-		{ img: logo4, name: 'abc' },
-		{ img: logo1, name: 'abc' },
-		{ img: logo2, name: 'abc' },
-		{ img: logo3, name: 'abc' },
-		{ img: logo4, name: 'abc' },
-	];
+	const[logos, setLogos] = useState([]);
+
+	useEffect(() => {
+		const fetchLogos = async () => {
+			try {
+				const response = await axios.get('http://localhost:3000/logos/all');
+				console.log(response.data);
+				setLogos(response.data);
+			} catch (error) {
+				console.error('Error:', error);
+			}
+		};
+
+		fetchLogos();
+	}, []);
+
+	const references = [...logos];
+
 
 
 	return (
@@ -48,19 +58,19 @@ const PartOfReferences = () => {
 							spaceBetween: 30,
 						},
 					}}>
-					{references.map((content, i) => (
+					{references.map((logo) => (
 						<SwiperSlide
 							lazy={false}
-							key={i}
+							key={logo._id}
 							className='mySwiper p-8'>
 							<div className='p-5 bg-white shadow-lg bg-opacity-70 shadow-slate-700 rounded-lg'>
 								<img
-									src={content.img}
+									src={`http://localhost:3000/${logo.path.slice(43)}`}
 									className='rounded-lg w-full'
 									loading='lazy'
 								/>
 								<div>
-									<h3 className='text-xl sm:text-sm lg:text-xl my-3'>{content.name}</h3>
+									<h3 className='text-xl sm:text-sm lg:text-xl my-3'>{logo.title}</h3>
 								</div>
 							</div>
 						</SwiperSlide>

@@ -5,6 +5,7 @@ const adminRoute = require('./routes/adminRoute');
 const conn = require('./db.js');
 const photoRoute=require('./routes/photoRoute.js')
 const logoRoute = require('./routes/logoRoute.js');
+const path = require('path');
 dotenv.config();
 
 // Connect to the DB
@@ -17,6 +18,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 
 app.use('/photos', photoRoute);

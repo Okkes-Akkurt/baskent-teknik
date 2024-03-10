@@ -11,7 +11,6 @@ const Header = () => {
 		const fetchPhotos = async () => {
 			try {
 				const response = await axios.get('http://localhost:3000/photos/all');
-				console.log(response.data);
 				setPhotos(response.data);
 			} catch (error) {
 				console.error('Error:', error);
@@ -21,7 +20,6 @@ const Header = () => {
 		fetchPhotos();
 	}, []);
 
-	console.log(photos)
 	const tempPhotos = [...photos];
 	return (
 		<div className='slider-container'>
@@ -42,7 +40,7 @@ const Header = () => {
 					<SwiperSlide key={photo._id}>
 						<div className=''>
 							<img
-								src={photo.path}
+								src={`http://localhost:3000/${photo.path.slice(43)}`}
 								alt={photo.title}
 								className='w-full'
 								loading='lazy'
