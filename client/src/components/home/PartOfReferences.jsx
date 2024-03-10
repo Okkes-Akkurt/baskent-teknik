@@ -17,7 +17,7 @@ const PartOfReferences = () => {
 			try {
 				const response = await axios.get('http://localhost:3000/logos/all');
 				console.log(response.data);
-				setLogos(response.data);
+				await setLogos(response.data);
 			} catch (error) {
 				console.error('Error:', error);
 			}

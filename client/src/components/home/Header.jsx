@@ -11,7 +11,7 @@ const Header = () => {
 		const fetchPhotos = async () => {
 			try {
 				const response = await axios.get('http://localhost:3000/photos/all');
-				setPhotos(response.data);
+				await setPhotos(response.data);
 			} catch (error) {
 				console.error('Error:', error);
 			}
