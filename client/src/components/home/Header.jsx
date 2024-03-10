@@ -1,36 +1,28 @@
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay,Pagination } from 'swiper/modules';
+import { Navigation, Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
-import { useEffect, useState } from 'react';
-
-
+import axios from 'axios';
 
 const Header = () => {
-const slidesItem = [
-	{
-		image: 'https://www.baysolarteknik.com/yonetim/upload/Anasayfa/1f06eb23f3b3d3abfcddbcf94551a9.jpg',
-		title: 'Güneşin Sıcaklığıyla, Enerji Verimliliği',
-		subtitle: 'Baysolar Teknik İle Geleceği Yakalayın.',
-	},
-	{
-		image: 'https://www.baysolarteknik.com/yonetim/upload/Anasayfa/639eaff48c2a397e9d214355385571.jpg',
-		title: 'Teknolojide Yenilik, Enerjide Güneş!',
-		subtitle: 'Geleceğe Işık Tutuyoruz, Güneşle Aydınlanıyoruz!',
-	}
-];
-
-	const [slides, setSlides] = useState(slidesItem);
+	const [photos, setPhotos] = useState([]);
 
 	useEffect(() => {
-		const hasChanged = slidesItem.length !== slides.length;
-		if (hasChanged) {
-			setSlides([...slidesItem]);
-		}
-	}, [slidesItem, slides]);
+		const fetchPhotos = async () => {
+			try {
+				const response = await axios.get('http://localhost:3000/photos/all');
+				console.log(response.data);
+				setPhotos(response.data);
+			} catch (error) {
+				console.error('Error:', error);
+			}
+		};
 
+		fetchPhotos();
+	}, []);
 
-
-
+	console.log(photos)
+	const tempPhotos = [...photos];
 	return (
 		<div className='slider-container'>
 			<Swiper
@@ -46,18 +38,18 @@ const slidesItem = [
 				}}
 				loop={true}
 				className='mySwiper'>
-				{slides.map((slide, index) => (
-					<SwiperSlide key={index}>
+				{tempPhotos.map((photo) => (
+					<SwiperSlide key={photo._id}>
 						<div className=''>
 							<img
-								src={slide.image}
-								alt=''
+								src={photo.path}
+								alt={photo.title}
 								className='w-full'
 								loading='lazy'
 							/>
 							<div className='imageText absolute top-1/2 -translate-y-1/2 text-white md:pl-36 pl-8'>
-								<h3 className='text-4xl md:text-6xl font-bold'>{slide.title}</h3>
-								<p className='mt-4 md:mt-8'>{slide.subtitle}</p>
+								<h3 className='text-4xl md:text-6xl font-bold'>{photo.title}</h3>
+								<p className='mt-4 md:mt-8'>{photo.subtitle}</p>
 							</div>
 						</div>
 					</SwiperSlide>
