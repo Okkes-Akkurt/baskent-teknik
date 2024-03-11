@@ -64,7 +64,7 @@ const Footer = () => {
 									<a
 										href='mailto:info@baskentteknik.com.tr'
 										className='hover:text-[#EB832A] hover:scale-110 transition-all duration-200'>
-										info@baskentteknik.com.tr
+										info@baskentteknik.com
 									</a>
 								</div>
 							</div>

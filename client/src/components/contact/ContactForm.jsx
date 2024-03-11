@@ -26,7 +26,7 @@ const ContactForm = () => {
 		onSubmit: async (values) => {
 			try {
 				const response = await axios.post('http://localhost:3000/send-mail', {
-					to_email: 'info@baskentteknik.com.tr',
+					to_email: 'info@baskentteknik.com',
 					from_name: values.name,
 					from_phone: values.phoneNumber,
 					from_email: values.email,

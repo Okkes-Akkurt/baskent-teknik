@@ -42,10 +42,10 @@ app.use((err, req, res, next) => {
 
 
 const transporter = nodemailer.createTransport({
-	service: '',
+	service: 'gmail',
 	auth: {
-		user: 'info@baskentteknik.com.tr',
-		pass: '',
+		user: 'info@baskentteknik.com',
+		pass: 'Baskentteknik06.',
 	},
 });
 
