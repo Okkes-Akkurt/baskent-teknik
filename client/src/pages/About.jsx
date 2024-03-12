@@ -17,7 +17,7 @@ const About = () => {
 					<h1 className='text-4xl font-bold mb-6 text-[#EB832A] mt-12'>Hakkımızda</h1>
 
 					<p className='text-lg mb-8'>
-						Başkent Teknik olarak, elektrik ve sıhhi tesisat konusunda Ankara'nın Etimesgut ilçesinde hizmet
+						Başkent Teknik olarak, elektrik ve sıhhi tesisat konusunda Ankara'da hizmet
 						vermekteyiz. Yenilikçi yaklaşımımız ve uzun yıllara dayanan deneyimimizle, müşterilerimize
 						kaliteli ve güvenilir çözümler sunmayı hedefliyoruz.
 					</p>
@@ -36,7 +36,7 @@ const About = () => {
 					</p>
 
 					{/* --------------- HİZMETLERİMİZ --------------- */}
-					
+
 
 					{/* --------------- NEDEN BİZ --------------- */}
 					<div className='bg-[#001F30] p-8 text-white rounded-md'>
