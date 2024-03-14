@@ -86,7 +86,7 @@ const ContactInfo = () => {
 							<a
 								href='mailto:info@Başkentteknik.com'
 								className='text-black'>
-								info@baskentteknik.com.tr
+								info@baskentteknik.com
 							</a>
 						</p>
 					</div>
