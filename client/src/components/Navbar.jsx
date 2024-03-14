@@ -49,12 +49,11 @@ function Navbar() {
 								<img
 									src={logo}
 									alt='Başkent Teknik'
-									className='rounded-full inline h-16 mr-2'
+									className='rounded-full inline h-20 mr-2'
 								/>
 							</div>
 							<span className='lg:block hidden'>
 								Başkent
-								<br />
 								Teknik
 							</span>
 						</a>
