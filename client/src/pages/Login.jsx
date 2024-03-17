@@ -25,7 +25,7 @@ const Login = () => {
 		e.preventDefault();
 		if (registered) {
 			axios
-				.post('http://localhost:3000/admin-giris', formData)
+				.post('https://baskentapi.onrender.com/admin-giris', formData)
 				.then((res) => {
 					console.log(res.data);
 					if (res.data.message !== 'Invalid credentials.') {
@@ -41,7 +41,7 @@ const Login = () => {
 					console.error('Error:', error);
 				});
 		} else if (!registered && formData.email) {
-			axios.post('http://localhost:3000/admin-kayit', formData).then((res) => {
+			axios.post('https://baskentapi.onrender.com/admin-kayit', formData).then((res) => {
 				console.log(res.data);
 			});
 			alert('Kaydınız başarıyla oluşturuldu').catch((error) => {

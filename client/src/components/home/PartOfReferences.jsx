@@ -15,7 +15,7 @@ const PartOfReferences = () => {
 	useEffect(() => {
 		const fetchLogos = async () => {
 			try {
-				const response = await axios.get('http://localhost:3000/logos/all');
+				const response = await axios.get('https://baskentapi.onrender.com/logos/all');
 				console.log(response.data);
 				await setLogos(response.data);
 			} catch (error) {
@@ -72,7 +72,7 @@ const PartOfReferences = () => {
 									className='relative w-full h-0'
 									style={{ paddingTop: '60%' }}>
 									<img
-										src={`http://localhost:3000/${logo.path.slice(43)}`}
+										src={`https://baskentapi.onrender.com/${logo.path.slice(43)}`}
 										className='absolute inset-0 w-full h-full object-contain rounded-lg'
 										loading='lazy'
 										alt={logo.title}

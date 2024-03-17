@@ -39,7 +39,7 @@ const AdminPanel = () => {
 		console.log('Payload:', payload);
 
 		axios
-			.post(`http://localhost:3000${uploadEndpoint}`, payload, {
+			.post(`https://baskentapi.onrender.com${uploadEndpoint}`, payload, {
 				headers: {
 					'Content-Type': 'multipart/form-data',
 				},
