@@ -1,7 +1,7 @@
-import { Swiper, SwiperSlide, } from 'swiper/react';
-import { Navigation, Pagination,Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
-import  logo1  from "../../assets/logos/1.png";
+import logo1 from '../../assets/logos/1.png';
 import logo2 from '../../assets/logos/2.png';
 import logo3 from '../../assets/logos/3.png';
 import logo4 from '../../assets/logos/4.png';
@@ -9,8 +9,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const PartOfReferences = () => {
-
-	const[logos, setLogos] = useState([]);
+	const [logos, setLogos] = useState([]);
 
 	useEffect(() => {
 		const fetchLogos = async () => {
@@ -27,8 +26,6 @@ const PartOfReferences = () => {
 	}, []);
 
 	const references = [...logos];
-
-
 
 	return (
 		<div className='bg-[#0CC0DF] mx-4 md:mx-8 lg:mx-36 shadow-2xl rounded-2xl my-7 xs:my-14'>
@@ -72,7 +69,7 @@ const PartOfReferences = () => {
 									className='relative w-full h-0'
 									style={{ paddingTop: '60%' }}>
 									<img
-										src={`https://baskentapi.onrender.com/${logo.path.slice(43)}`}
+										src={`/${logo.path}`}
 										className='absolute inset-0 w-full h-full object-contain rounded-lg'
 										loading='lazy'
 										alt={logo.title}
