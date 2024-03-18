@@ -10,7 +10,8 @@ const Header = () => {
 	useEffect(() => {
 		const fetchPhotos = async () => {
 			try {
-				const response = await axios.get('http://localhost:3000/photos/all');
+				const response = await axios.get('https://baskentapi.onrender.com/photos/all');
+				console.log(response);
 				await setPhotos(response.data);
 			} catch (error) {
 				console.error('Error:', error);
@@ -40,7 +41,7 @@ const Header = () => {
 					<SwiperSlide key={photo._id}>
 						<div className='relative md:h-[400px] lg:h-[600px] h-[200px] sm:h-[400px] xl:h-[800px]'>
 							<img
-								src={`https://baskentapi.onrender.com/${photo.path.slice(42)}`}
+								src={`${photo.path}`}
 								alt={photo.title}
 								className='w-full'
 								loading='lazy'

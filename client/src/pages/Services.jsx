@@ -52,7 +52,8 @@ const Services = () => {
 									key={i}
 									className='flex items-center md:w-custom bg-[#0CC0DF] px-4 py-4 rounded-lg shadow-lg justify-center'>
 									<svg
-										className='w-3.5 h-3.5 me-2 text-green-600 flex-shrink-0'
+										className='me-2 text-green-600 flex-shrink-0'
+										style={{ height: '1.5rem', width: '1.5rem' }}
 										aria-hidden='true'
 										xmlns='http://www.w3.org/2000/svg'
 										fill='currentColor'
