@@ -25,7 +25,9 @@ const References = () => {
 				{referenceList.map((item, i) => (
 					<div
 						key={i}
+						style={{ paddingTop: '1.2rem', paddingBottom: '1.2rem', textAlign: 'center' }}
 						className='flex-grow-0 basis-auto flex-shrink-0 md:w-custom-references w-custom-references-2  shadow-md rounded-md shadow-[#0CC0DF] bg-[#F7B02F] bg-opacity-70'>
+						
 						<div className='w-full min-h-[100px] break-words px-6 py-3 flex items-center justify-center text-md md:text-lg lg:text-xl'>
 							{item}
 						</div>
