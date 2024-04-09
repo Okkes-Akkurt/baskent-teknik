@@ -7,7 +7,15 @@ const photoRoute=require('./routes/photoRoute.js')
 const logoRoute = require('./routes/logoRoute.js');
 const path = require('path');
 const nodemailer = require('nodemailer');
+const fileUpload = require('express-fileupload');
+const cloudinary = require('cloudinary').v2;
 dotenv.config();
+
+cloudinary.config({
+	cloud_name: process.env.CLOUD_NAME,
+	api_key: process.env.CLOUD_API_KEY,
+	api_secret: process.env.CLOUD_API_SECRET,
+});
 
 // Connect to the DB
 conn();
@@ -20,6 +28,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use(fileUpload({useTempFiles:true}))
 
 
 app.use('/photos', photoRoute);

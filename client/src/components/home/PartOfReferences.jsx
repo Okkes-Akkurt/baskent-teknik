@@ -69,7 +69,7 @@ const PartOfReferences = () => {
 									className='relative w-full h-0'
 									style={{ paddingTop: '60%' }}>
 									<img
-										src={`${logo.path}`}
+										src={`${logo.url}`}
 										className='absolute inset-0 w-full h-full object-contain rounded-lg'
 										loading='lazy'
 										alt={logo.title}
