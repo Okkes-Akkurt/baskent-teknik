@@ -77,10 +77,10 @@ const AdminPanel = () => {
 
 	const fetchFiles = async () => {
 		try {
-			const response_photo = await axios.get(`http://localhost:3000/photos/all`);
+			const response_photo = await axios.get(`https://baskentapi.onrender.com/photos/all`);
 			setPhotoFiles(response_photo.data);
 			console.log(photoFiles);
-			const response_logo = await axios.get(`http://localhost:3000/logos/all`);
+			const response_logo = await axios.get(`https://baskentapi.onrender.com/logos/all`);
 			setLogoFiles(response_logo.data);
 		} catch (error) {
 			console.error('Error fetching files:', error);
@@ -116,7 +116,7 @@ const AdminPanel = () => {
 			formDataCloudinary.append('title', title);
 			formDataCloudinary.append('subtitle', subtitle);
 
-			const response = await axios.post(`http://localhost:3000${uploadEndpoint}`, formDataCloudinary, {
+			const response = await axios.post(`https://baskentapi.onrender.com${uploadEndpoint}`, formDataCloudinary, {
 				headers: {
 					'Content-Type': 'multipart/form-data',
 				},
@@ -138,7 +138,7 @@ const AdminPanel = () => {
 
 	const handleDelete = async (fileId) => {
 		try {
-			await axios.delete(`http://localhost:3000/${formData.uploadType}s/${fileId}`);
+			await axios.delete(`https://baskentapi.onrender.com/${formData.uploadType}s/${fileId}`);
 			await fetchFiles();
 		} catch (error) {
 			console.log(fileId);

@@ -10,7 +10,7 @@ const Header = () => {
 	useEffect(() => {
 		const fetchPhotos = async () => {
 			try {
-				const response = await axios.get('http://localhost:3000/photos/all');
+				const response = await axios.get('https://baskentapi.onrender.com/photos/all');
 				console.log(response);
 				await setPhotos(response.data);
 			} catch (error) {

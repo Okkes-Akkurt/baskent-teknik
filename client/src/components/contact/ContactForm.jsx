@@ -25,7 +25,7 @@ const ContactForm = () => {
 		}),
 		onSubmit: async (values) => {
 			try {
-				const response = await axios.post('https://baskentapi.onrender.com/send-mail', {
+				const response = await axios.post('https://baskentapi.onrender.com/send-email', {
 					to_email: 'info@baskentteknik.com',
 					from_name: values.name,
 					from_phone: values.phoneNumber,

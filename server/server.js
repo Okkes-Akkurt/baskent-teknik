@@ -51,17 +51,20 @@ app.use((err, req, res, next) => {
 
 
 const transporter = nodemailer.createTransport({
-	service: 'gmail',
+	host: 'smtp.hostinger.com',
+	port: 465,
+	secure: false,
 	auth: {
 		user: 'info@baskentteknik.com',
 		pass: 'Baskentteknik06.',
 	},
+
 });
+
 
 app.post('/send-email', (req, res) => {
 	const { to_email, from_name, from_phone, from_email, subject, message } = req.body;
 
-	// Setup email data with unicode symbols
 	const mailOptions = {
 		from: `"${from_name}" <${from_email}>`,
 		to: to_email,
@@ -69,7 +72,6 @@ app.post('/send-email', (req, res) => {
 		text: `${from_name} (${from_phone}): ${message}`,
 	};
 
-	// Send mail with defined transport object
 	transporter.sendMail(mailOptions, (error, info) => {
 		if (error) {
 			console.error('Error sending email:', error);
