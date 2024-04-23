@@ -5,18 +5,22 @@ const adminSchema = new mongoose.Schema({
 		type: String,
 		required: true,
 		unique: true,
-		trim: true
+		trim: true,
 	},
 	email: {
 		type: String,
 		required: true,
 		unique: true,
-		trim: true
+		trim: true,
 	},
 	password: {
 		type: String,
-		required: true
+		required: true,
 	},
+	isApproved: {
+		type: Boolean,
+		default:false
+	}
 });
 
 const Admin = mongoose.model('Admin', adminSchema);

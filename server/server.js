@@ -8,6 +8,7 @@ const logoRoute = require('./routes/logoRoute.js');
 const path = require('path');
 const nodemailer = require('nodemailer');
 const fileUpload = require('express-fileupload');
+const { FILE } = require('dns');
 const cloudinary = require('cloudinary').v2;
 dotenv.config();
 
@@ -50,37 +51,35 @@ app.use((err, req, res, next) => {
 });
 
 
-const transporter = nodemailer.createTransport({
-	host: 'smtp.hostinger.com',
-	port: 465,
-	secure: false,
-	auth: {
-		user: 'info@baskentteknik.com',
-		pass: 'Baskentteknik06.',
-	},
-
-});
 
 
-app.post('/send-email', (req, res) => {
+const transporter = nodemailer.createTransport({ host: 'smtp.hostinger.com', secure: false, port: 587, auth: { user: 'info@baskentteknik.com', pass: 'Baskentteknik06.', }, requireTLS: true, });
+
+
+app.post('/send-email', async(req, res) => {
 	const { to_email, from_name, from_phone, from_email, subject, message } = req.body;
 
 	const mailOptions = {
-		from: `"${from_name}" <${from_email}>`,
+		from: 'info@baskentteknik.com',
 		to: to_email,
 		subject: subject,
-		text: `${from_name} (${from_phone}): ${message}`,
+		text: `İsim: ${from_name}, Telefon No: ${from_phone}, E-mail: ${from_email} , Mesaj: ${message}`,
 	};
 
-	transporter.sendMail(mailOptions, (error, info) => {
-		if (error) {
-			console.error('Error sending email:', error);
-			return res.status(500).json({ success: false, error: 'Failed to send email' });
-		}
+	console.log('mailConfig',mailOptions)
 
-		console.log('Email sent:', info.response);
-		return res.status(200).json({ success: true, message: 'Email sent successfully' });
+
+	await transporter.sendMail(mailOptions, (error, info) => {
+		if (error) {
+			console.log('Error sending email:', error);
+		} else {
+			console.log('Email sent:', info.response);
+		}
 	});
+
+	await res.status(200).json({
+		message:'Email başarılı bir şekilde gönderilmiştir'
+	})
 });
 
 app.listen(PORT, () => {

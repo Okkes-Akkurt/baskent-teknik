@@ -39,16 +39,31 @@ const Login = () => {
 				})
 				.catch((error) => {
 					console.error('Error:', error);
+					if (error.response.status == 401) {
+						alert('Kullanıcı adınızı veya şifrenizi hatalı girdiniz!');
+					}
+					if (error.response.status == 403) {
+						alert('Email bilgisi onaylanmamış. Lütfen admine ulaşın!');
+					}
 				});
-		} else if (!registered && formData.email) {
-			axios.post('https://baskentapi.onrender.com/admin-kayit', formData).then((res) => {
-				console.log(res.data);
-			});
-			alert('Kaydınız başarıyla oluşturuldu').catch((error) => {
-				console.error('Error:', error);
-			});
+		} else if (!registered ||formData.email!='') {
+			axios
+				.post('https://baskentapi.onrender.com/admin-kayit', formData)
+				.then((res) => {
+					console.log(res.data.message);
+					if (res.status === 200) {
+						alert('Kaydınız admin tarafından onaylandığında giriş yapabileceksiniz.');
+					}
+				})
+				.catch((error) => {
+					if (error.response.status == 400) {
+						alert(error.response.data.message);
+					}
+					console.log(error.response);
+				});
+
 		} else {
-			alert('Lütfen bir e-posta adresi giriniz.');
+			alert('Lütfen bir e-posta adresi ve kullanıcı adı giriniz.');
 		}
 	};
 
@@ -135,6 +150,7 @@ const Login = () => {
 								onChange={handleChange}
 								className='w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500'
 								placeholder='E-mail girin'
+								required
 							/>
 						</div>
 

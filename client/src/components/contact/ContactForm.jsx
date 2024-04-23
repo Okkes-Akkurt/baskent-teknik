@@ -175,7 +175,7 @@ const ContactForm = () => {
 					className='py-3 px-5 text-lg font-medium text-center bg-[#F7B02F] hover:bg-[#fbbf50] transition duration-300 rounded-lg w-full focus:ring-4 focus:outline-none '>
 					Gönder
 				</button>
-				{success && <p className='p-3 border-lime-600'> Mesajınız iletildi. </p>}
+				{success && <p className='p-3  text-center bg-lime-600 font-bold rounded-lg'> Mesajınız iletildi. </p>}
 			</form>
 		</div>
 	);
